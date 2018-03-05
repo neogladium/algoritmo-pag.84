@@ -1,25 +1,30 @@
-/*var $alumnos = 0;
-var $notas;
+//Declaración variables
+var mayor = 0;
+var posicion;
+var aprobados = 0;
+var alumno = [6.5, 4, 5.5, 9, 8.4, 7, 3.6, 4, 5, 8, 9.7, 5, 8.7, 4.2, 7, 5.6, 7.5, 2.5, 4, 6.5, 4.8, 9.8, 6.3, 2.5, 6, 7.8, 4.5, 2, 0, 3, 6.8, 8.6, 7.4, 1, 4.5]
 
-while ($alumnos <= 2) {
+//Mostrar las notas de los alumnos
+for (i = 0; i < 35; i++) {
+    document.write("Alumno " + i + ", Nota: " + alumno[i])
+    document.write("<br>")
 
-    // $notas = 6;
-    document.write($notas);
-    document.write($alumnos);
-    $alumnos++;
-    document.write($alumnos)
 }
 
-*/
-/*alert("Hola Mundo!");*/
-
-var alumnos;
-var notas;
-var nombre = "";
-
-for (alumnos = 0; alumnos < 34; alumnos++) {
-    // Se ejecuta 5 veces, con valores desde paso desde 0 hasta 4.
-    document.write(notas);
-    document.write(alumnos);
-    document.write(nombre);
+//Mostrar mayor nota
+for (i = 0; i < 35; i++) {
+    if (mayor < alumno[i]) {
+        mayor = alumno[i];
+    }
 }
+document.write("<br>")
+document.write("La mayor nota es un: " + mayor);
+document.write("<br>")
+
+//Alumnos aprobados
+for (i = 0; i < 35; i++) {
+    if (alumno[i] >= 5) {
+        ++aprobados;
+    }
+}
+document.write("Cantidad de alumnos aprobados: " + aprobados + " ");
